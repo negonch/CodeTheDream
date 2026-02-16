@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pinyon+Script&display=swap" rel="stylesheet')
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pinyon+Script&display=swap');
 
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
+    color: #000;
 }
 
 span {
@@ -28,12 +30,17 @@ img {
 }
 
 .container {
-    width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 20px 20px;
+    width: 100%;
 }
 
 header {
-    padding: 50px 0;
+    padding: 28px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 header .logo {
@@ -43,15 +50,10 @@ header .logo {
     font-weight: 800;
 }
 
-header nav {
-    float: right;
-    width: 50%;
-}
-
 header nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-between;
+    gap: 70px;
 }
 
 header nav ul li {
@@ -60,25 +62,25 @@ header nav ul li {
 
 header nav ul li a {
     color: #000;
+    display: inline-block;
     transition: all 0.3s ease;
 }
 
 header nav ul li a:hover {
     color: #008B8B;
-    text-shadow: 0 0 5px #fff;
     transform: scale(1.3);
-    display: inline-block;
 }
 
 .art--info {
+    color: #000;
     width: 530px;
-    padding-top: 70px;
+    padding-top: 30px;
 }
 
 .art--info h2 {
     color: #000;
     font-size: 40px;
-    font-weight: 520;
+    font-weight: 650;
 }
 
 .art--info h1 {
@@ -87,23 +89,24 @@ header nav ul li a:hover {
     font-weight: 300;
     line-height: 140%;
     margin: 30px 0;
+    max-width: 52ch;
 }
 
-.painting--info h3 {
+.art--painting h3 {
     color: #000;
     font-size: 20px;
-    font-weight: 600;
-    padding-top: 150px;
-    margin-left:700px;
+    font-weight: 700;
+    padding-top: 70px;
+    margin-bottom: 6px;
 }
 
-.painting--info p {
+.art--painting p {
     color: #000;
-    margin-left:700px;
+    opacity: 0.8;
 }
 
-.art--info .btn {
-    background: #ааа;
+.btn {
+    background: #f0f0f0;
     color: #000;
     font-size: 18px;
     padding: 15px 20px;
@@ -114,19 +117,38 @@ header nav ul li a:hover {
     transition: opacity 0.3s;
 }
 
-.art--info .btn:hover {
+.btn:hover {
     opacity: 0.7;
     color: #008B8B;
 }
 
-.art--info .btn:active {
+.btn:active {
     opacity: 0.9;
 }
 
-.painting--info img {
-    position: relative;
-    width: 700px;
-    height: 700px;
-    top:-850px;
-    right: -700px;
+.art{
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 60px;
+    align-items: start;
+    padding: 40px 0;
+}
+
+.art--painting img{
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+}
+
+.painting--description{
+    margin-top: 30px;
+}
+
+.tour--description{
+    margin-top: 30px;
+}
+.error--message{
+    color:  red;
+    margin-top: 20px;
+    font-size: 18px;
 }

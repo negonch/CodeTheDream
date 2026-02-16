@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Code the Dream - project</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-
-    <body>
-        <script src="scripts.js"></script>
-        <div class="wrapper">
-        <header class="container">
-            <span class="logo">ART.</span>
-            <nav>
-                <ul>
-                    <li class="active"><a href="#">Visit</a></li>
-                    <li class="active"><a href="#">Exhibitions</a></li>
-                    <li class="active"><a href="#">Art&Artists</a></li>
-                    <li class="active"><a href="#">Events</a></li>
-                </ul>
-            </nav>
-            </header>
-            <div class="art container">
-                <div class="art--info">
-                    <h2>The Art Institute of Chicago</h2>
-                    <h1>Welcome to the Art Institute of Chicago, home to a collection of art that
-                        spans centuries and the globe—and one of Tripadvisor’s “Best of the Best”
-                        US attractions of 2025. We look forward to your visit and invite you to
-                        explore our many exhibitions, join one of our free daily tours, or make
-                        your own tour of must-see works.</h1>
-                    <button class="btn">CHICAGO ARTISTS</button>
-                    <button class="btn">IMPRESSIONISM</button>
-                    <button class="btn">ART DECO</button>
-                </div>
-                <div class="painting--info">
-                    <h3>Water Lilies</h3>
-                    <p>1906</p>
-                    <p>Claude Monet (French, 1840-1926)</p>
-                    <img src="img/default.jpg" alt="">
-                </div>
-            </div>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code the Dream - project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrapper">
+    <header class="container">
+        <span class="logo">ART.</span>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="art container">
+        <div class="art--info">
+            <h2>The Art Institute of Chicago</h2>
+            <h1>Welcome to the Art Institute of Chicago, home to a collection of art that
+                spans centuries and the globe—and one of Tripadvisor’s “Best of the Best”
+                US attractions of 2025. We look forward to your visit and invite you to
+                explore our many exhibitions, join one of our free daily tours, or make
+                your own tour of must-see works.</h1>
+            <button class="btn" id="visit">VISIT</button>
+            <button class="btn" id="exhibitions">EXHIBITIONS</button>
+            <button class="btn" id="artists">ART&ARTISTS</button>
+            <button class="btn" id="btnTour">TOUR</button>
+            <div class="tour--description" id="tourDescription" hidden></div>
+            <div class="error--message" id="errMessageTour"></div>
         </div>
-    </body>
+
+        <div class="art--painting">
+            <img src="img/default.jpg" alt="">
+            <button class="btn" id="btnDescription">PAINTING DESCRIPTION</button>
+            <div class="painting--description" id="paintingDescription" hidden></div>
+            <div class="error--message" id="errMessageDescription"></div>
+        </div>
+    </div>
+</div>
+<script src="scripts.js"></script>
+</body>
 </html>
